@@ -14,7 +14,7 @@ function getFetch(name, s, e) {
       document.querySelector("h2").innerText =
         data.standard.city + ", " + data.standard.countryname;
 
-      const newUrl = `http://api.timezonedb.com/v2.1/get-time-zone?key=${tzApiKey}&format=json&by=position&lat=${data.latt}&lng=${data.longt}`;
+      const newUrl = `https://api.timezonedb.com/v2.1/get-time-zone?key=${tzApiKey}&format=json&by=position&lat=${data.latt}&lng=${data.longt}`;
       fetch(newUrl)
         .then((res) => res.json()) // parse response as JSON
         .then((data) => {
